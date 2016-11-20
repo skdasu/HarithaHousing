@@ -1,1 +1,27 @@
-angular.module('sampleApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'NerdCtrl', 'NerdService', 'GeekCtrl', 'GeekService']);
+angular.module('harithaHousing', ["ui.router"])
+    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise("/apartmentblocks")
+        $stateProvider
+            .state('apartments', {
+                url: "/apartments",
+                abstract: true,
+                template: '<div class="box box-default" ui-view></div>'
+                    // controller: 'MasterLayoutController'
+            })
+            .state('apartmentsblocks', {
+                url: '/apartmentblocks',
+                templateUrl: 'angular-app/modules/flats/blocks/blocks.html',
+                controller: 'BlocksListingController'
+
+            })
+            .state('apartmentsflatsListing', {
+                url: '/apartmentsFlatsListing',
+                params: {
+                    'blockSelected': '',
+                    'blockNumber': '',
+                },
+                templateUrl: 'angular-app/modules/flats/flatslisting/flats.html',
+                controller: 'FlatsListingController'
+
+            });
+    }]);

@@ -1,10 +1,10 @@
 {
-  "name": "mean-grunt",
+  "name": "Haritha-Housing",
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/scotch-io/mean-grunt.git"
-  },  
+    "url": "https://github.com/skdasu/HarithaHousing"
+  },
   "scripts": {
     "start": "grunt"
   },

@@ -1,0 +1,23 @@
+<div class="compaign dashboard-subheader-margin">
+    <p class="imp-blue"> Sales Details</p>
+</div>
+
+<!-- <div class="sales-details-container">
+    <div class="card sales-details" ng-repeat="sale in salesDetails">
+      <div class="item item-text-wrap windowsSalesDetails">
+          <p class="imp-blue">{{sale.name.fname}} {{sale.name.lname}}</p>
+          <p class="black">{{sale.policyname}} <span class="amount">{{sale.gap | currency : "$" :0}}</span> </p>
+          <p class="faded">{{sale.date | date:"MMM d ',' yyyy '-' h:mm a "}}</p>
+      </div>
+    </div>
+</div> -->
+<div class="list-group">
+    <p>{{testmsg}}</p>
+    <div ng-repeat="flat in flatsDetails">
+        <a href="#" class="list-group-item">
+            <p class="list-group-item-text">Flat Number: {{flat.flatNum}} &nbsp; Owner: {{flat.name}} &nbsp; Age: {{flat.age}} </p>
+            <p class="list-group-item-text">email: {{flat.email}} &nbsp; Phone: {{flat.phone}}</p>
+            <p class="list-group-item-text">Rented: {{flat.rented}} &nbsp; Balance To Pay: {{flat.balance}}</p>
+        </a>
+    </div>
+</div>
