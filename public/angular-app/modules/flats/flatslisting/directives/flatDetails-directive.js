@@ -15,7 +15,7 @@ directive('flatDetails', ['$state', '$rootScope', function($state, $rootScope) {
         templateUrl: "angular-app/modules/flats/flatslisting/directives/flatDetails-template.html",
         link: linkFunction,
         scope: {
-            flatsdetailsdata: "@"
+            flatsdetailsdata: "="
         }
     };
 }]);
