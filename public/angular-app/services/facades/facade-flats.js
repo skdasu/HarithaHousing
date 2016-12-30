@@ -1,9 +1,7 @@
-/*************************************************************
+/************************************************************
  ****    AUTHOR: Srikrishna Dasu                             *
- ****    srikrishna.dasu@cognizant.com                       *
  ****    Version 1.0                                         *
- ****    Hash: Palladium                                     *
- ****    Cognizant DEP-DEE TCG                               *
+ ****    Hash: harithaHousing                                *
  **************************************************************/
 angular.module('harithaHousing').
 factory('FlatsFacade', ['$q', '$http', function($q, $http) {
@@ -37,43 +35,26 @@ factory('FlatsFacade', ['$q', '$http', function($q, $http) {
 }]);
 
 /*
-//Example get Call
-getData = function(callbackFunc) {
-    $http({
-        method: 'GET',
-        url: 'https://www.example.com/api/v1/page',
-        params: 'limit=10, sort_by=created:desc',
-        headers: {
-            'Authorization': 'Token token=xxxxYYYYZzzz'
-        }
-    }).success(function(data) {
-        // With the data succesfully returned, call our callback
-        callbackFunc(data);
-    }).error(function() {
-        alert("error");
-    });
-}
+JSON - Generator - Profile for flats data generation
 
+[
+  '{{repeat(100, 200)}}',
+  {
+    flatID: '{{index()}}',
+    flatNum: '{{index(101)}}',
+    rented: '{{bool()}}',
+    occupancyByOwner: '{{bool()}}',
+    balance: '{{integer(1000, 4000, "0,0.00")}}',
+    age: '{{integer(20, 40)}}',
+    eyeColor: '{{random("blue", "brown", "green")}}',
+    name: '{{firstName()}} {{surname()}}',
+    gender: '{{gender()}}',
+    email: '{{email()}}',
+    phone: '+1 {{phone()}}',
+    showMenu: false,
+    registered: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}'
+  }
+]
 
-
-//Example Post Call
-var URL = appConfig.MIDDLEWARE_URL + appConfig.LOGIN_URL_PATH;
-var headers = {
-    'Content-Type': "application/json"
-};
-
-
-var loginRequest = {
-    method: 'POST',
-    headers: headers,
-    url: URL,
-    data: {
-        username: $scope.credentials.userName,
-        password: $scope.credentials.password
-    }
-};
-$http(loginRequest).then(function successCallback(response) {}
-
-};
 
 */

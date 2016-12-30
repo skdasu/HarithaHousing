@@ -23,11 +23,17 @@ directive('flatDetails', function() {
                 //setData();
             }
         });
+
+        $scope.displayMenu = function(index){
+          console.log("before change"+angular.toJson($scope.flatsDetails[index]));
+          $scope.flatsDetails[index].showMenu = !$scope.flatsDetails[index].showMenu;
+          console.log("after change"+angular.toJson($scope.flatsDetails[index]));
+        };
     };
 
     return {
         restrict: 'E',
-        templateUrl: "angular-app/modules/flats/flatslisting/directives/flatDetails-template.html",
+        templateUrl: "angular-app/modules/flats/directives/flatDetails/flatDetails-template.html",
         link: linkFunction,
         controller: controllerFunction,
         scope: {

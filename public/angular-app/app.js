@@ -23,5 +23,11 @@ angular.module('harithaHousing', ["ui.router"])
                 templateUrl: 'angular-app/modules/flats/flatslisting/flats.html',
                 controller: 'FlatsListingController'
 
+            })
+            .state('dashboard', {
+                url: '/dashboard',
+                templateUrl: 'angular-app/modules/dashboard/dashboard.html',
+                controller: 'DashboardController'
+
             });
     }]);

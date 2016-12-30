@@ -1,9 +1,7 @@
 /************************************************************
  ****    AUTHOR: Srikrishna Dasu                             *
- ****    srikrishna.dasu@cognizant.com                       *
  ****    Version 1.0                                         *
- ****    Hash: Palladium                                     *
- ****    Cognizant DEP-DEE TCG                               *
+ ****    Hash: harithaHousing                                *
  **************************************************************/
 
 angular.module('harithaHousing').

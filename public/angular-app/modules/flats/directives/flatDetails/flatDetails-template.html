@@ -1,0 +1,35 @@
+<div class="compaign dashboard-subheader-margin">
+    <p class="imp-blue"> Sales Details</p>
+</div>
+
+<!-- <div class="sales-details-container">
+    <div class="card sales-details" ng-repeat="sale in salesDetails">
+      <div class="item item-text-wrap windowsSalesDetails">
+          <p class="imp-blue">{{sale.name.fname}} {{sale.name.lname}}</p>
+          <p class="black">{{sale.policyname}} <span class="amount">{{sale.gap | currency : "$" :0}}</span> </p>
+          <p class="faded">{{sale.date | date:"MMM d ',' yyyy '-' h:mm a "}}</p>
+      </div>
+    </div>
+</div> -->
+<div class="list-group">
+    <!-- <p>{{testmsg}}</p> -->
+    <div ng-repeat="flat in flatsDetails" class="flatListing-directive">
+        <div class="list-group-item flatlist-group-item">
+            <div ng-click="displayMenu($index)" ng-show="!flat.showMenu">
+                <p class="list-group-item-text">Flat Number: {{flat.flatNum}} &nbsp; Owner: {{flat.name}} &nbsp; Age: {{flat.age}} </p>
+                <p class="list-group-item-text">email:<a href="mailto:{{flat.email}}?Subject=Haritha Housing - Flat#{{flat.flatNum}}">{{flat.email}}</a>                    &nbsp; Phone: {{flat.phone}}</p>
+                <p class="list-group-item-text">Occupancy By: {{flat.occupancyByOwner?'Owner':'Rented'}} &nbsp; Maintenance pending to pay: {{flat.balance}}</p>
+            </div>
+            <div class="box-body" ng-click="displayMenu($index)" ng-show="flat.showMenu">
+                <a class="btn btn-app">
+                    <i class="fa fa-inr"></i> Pay Maintenance
+                </a>
+                <a class="btn btn-app">
+                    <i class="fa fa-list-alt"></i> View Flat Details
+                </a>
+                <a class="btn btn-app">
+                    <i class="fa fa-user-plus"></i> Rent This Flat
+                </a>
+            </div>
+        </div>
+    </div>

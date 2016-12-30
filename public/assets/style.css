@@ -1,1 +1,8 @@
-.flatlist-group-item			{ margin-top: 10px;}
+.flatlist-group-item			{ margin-top: 10px; cursor: pointer;}
+.flatListing-directive .btn-app {
+    margin: 0 0 0 10px;
+}
+
+.flatListing-directive .box-body {
+    padding: 0 10px 0 10px !important;
+}
