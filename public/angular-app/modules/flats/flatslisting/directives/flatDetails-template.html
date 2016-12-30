@@ -12,12 +12,13 @@
     </div>
 </div> -->
 <div class="list-group">
-    <p>{{testmsg}}</p>
+    <!-- <p>{{testmsg}}</p> -->
     <div ng-repeat="flat in flatsDetails">
-        <a href="#" class="list-group-item">
+        <div class="list-group-item flatlist-group-item">
             <p class="list-group-item-text">Flat Number: {{flat.flatNum}} &nbsp; Owner: {{flat.name}} &nbsp; Age: {{flat.age}} </p>
-            <p class="list-group-item-text">email: {{flat.email}} &nbsp; Phone: {{flat.phone}}</p>
-            <p class="list-group-item-text">Rented: {{flat.rented}} &nbsp; Balance To Pay: {{flat.balance}}</p>
-        </a>
+            <p class="list-group-item-text">email:<a href="mailto:{{flat.email}}?Subject=Haritha Housing - Flat#{{flat.flatNum}}">{{flat.email}}</a> &nbsp;
+                Phone: {{flat.phone}}</p>
+            <p class="list-group-item-text">Occupancy By: {{flat.rented?'Rented':'Owner'}} &nbsp; Maintenance pending to pay: {{flat.balance}}</p>
+        </div>
     </div>
 </div>
