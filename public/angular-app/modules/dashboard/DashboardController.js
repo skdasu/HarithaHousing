@@ -11,7 +11,7 @@ controller('DashboardController', ['$scope', '$stateParams', '$state', '$rootSco
 
     $scope.blockClick = function(blockName, blockNum) {
         console.log("came to blocks controllerv  " + blockName + "     " + blockNum)
-        $state.go('apartmentsflatsListing', {
+        $state.go('flatsListing', {
             blockSelected: blockName,
             blockNumber: blockNum
         });

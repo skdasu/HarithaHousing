@@ -37,7 +37,8 @@ directive('flatDetails', function() {
         link: linkFunction,
         controller: controllerFunction,
         scope: {
-            inData: "="
+            inData: "=",
+            navigateToFlat: "&getSelectedFlatDetails"
         }
     };
 });

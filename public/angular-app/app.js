@@ -14,14 +14,25 @@ angular.module('harithaHousing', ["ui.router"])
                 controller: 'BlocksListingController'
 
             })
-            .state('apartmentsflatsListing', {
-                url: '/apartmentsFlatsListing',
+            .state('flatsListing', {
+                url: '/flatslisting',
                 params: {
                     'blockSelected': '',
                     'blockNumber': '',
                 },
                 templateUrl: 'angular-app/modules/flats/flatslisting/flats.html',
                 controller: 'FlatsListingController'
+
+            })
+            .state('flatDetails', {
+                url: '/flatsdetails',
+                params: {
+                    'blockSelected': '',
+                    'blockNumber': '',
+                    'flatNumber': '',
+                },
+                templateUrl: 'angular-app/modules/flats/flatslisting/flatdetails.html',
+                controller: 'FlatDetailsController'
 
             })
             .state('dashboard', {
