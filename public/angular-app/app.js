@@ -24,15 +24,15 @@ angular.module('harithaHousing', ["ui.router"])
                 controller: 'FlatsListingController'
 
             })
-            .state('flatDetails', {
-                url: '/flatsdetails',
+            .state('detail', {
+                url: '/detail',
                 params: {
                     'blockSelected': '',
                     'blockNumber': '',
                     'flatNumber': '',
                 },
-                templateUrl: 'angular-app/modules/flats/flatslisting/flatdetails.html',
-                controller: 'FlatDetailsController'
+                templateUrl: 'angular-app/modules/flats/detail/detail.html',
+                controller: 'DetailController'
 
             })
             .state('dashboard', {

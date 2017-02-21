@@ -5,9 +5,9 @@
  **************************************************************/
 
 angular.module('harithaHousing').
-controller('FlatDetailsController', ['$scope', '$stateParams', '$state', '$rootScope', 'FlatsFacade', function($scope, $stateParams, $state, $rootScope, FlatsFacade) {
+controller('DetailController', ['$scope', '$stateParams', '$state', '$rootScope', 'FlatsFacade', function($scope, $stateParams, $state, $rootScope, FlatsFacade) {
 
-    $scope.tagline = "Flat Details Controller";
+    $scope.tagline = "Detail Controller";
 
     $scope.selectedBlock = $stateParams.blockSelected;
     $scope.selectedBlockNumber = $stateParams.blockNumber;
@@ -24,7 +24,7 @@ controller('FlatDetailsController', ['$scope', '$stateParams', '$state', '$rootS
             $scope.flatsinBlock = d;
         });
     };
-    
+
     $scope.getSelectedFlatDetails = function(){
     	console.log("came to controller function");
     };

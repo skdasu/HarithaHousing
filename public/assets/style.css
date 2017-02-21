@@ -6,3 +6,11 @@
 .flatListing-directive .box-body {
     padding: 0 10px 0 10px !important;
 }
+
+.glyphicon.glyphicon-forward.forward-icon , .glyphicon.glyphicon-backward.backward-icon{
+	position:absolute;
+	right:1%;
+	top:30%;	
+    color: #AAA;
+    font-size: 2em;
+}
