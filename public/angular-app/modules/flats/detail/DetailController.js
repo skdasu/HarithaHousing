@@ -9,11 +9,9 @@ controller('DetailController', ['$scope', '$stateParams', '$state', '$rootScope'
 
     $scope.tagline = "Detail Controller";
 
-    $scope.selectedBlock = $stateParams.blockSelected;
-    $scope.selectedBlockNumber = $stateParams.blockNumber;
-    $scope.flatsinBlock = {};
+    $scope.flatID = $stateParams.flatID;
 
-    $scope.getFlatsInBlock = function() {
+    $scope.getFlatDetails = function() {
         console.log("came to notes load");
         var request = {
             blockName: $scope.householdid,
@@ -25,11 +23,7 @@ controller('DetailController', ['$scope', '$stateParams', '$state', '$rootScope'
         });
     };
 
-    $scope.getSelectedFlatDetails = function(){
-    	console.log("came to controller function");
-    };
-
     console.log("came to Flats Listing controller  " + $scope.selectedBlock + " " + $scope.selectedBlockNumber);
-    $scope.getFlatsInBlock();
+    $scope.getFlatDetails();
 
 }]);

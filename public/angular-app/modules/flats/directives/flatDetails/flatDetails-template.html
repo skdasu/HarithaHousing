@@ -19,19 +19,20 @@
                 <p class="list-group-item-text">Flat Number: {{flat.flatNum}} &nbsp; Owner: {{flat.name}} &nbsp; Age: {{flat.age}} </p>
                 <p class="list-group-item-text">email:<a href="mailto:{{flat.email}}?Subject=Haritha Housing - Flat#{{flat.flatNum}}">{{flat.email}}</a>                    &nbsp; Phone: {{flat.phone}}</p>
                 <p class="list-group-item-text">Occupancy By: {{flat.occupancyByOwner?'Owner':'Rented'}} &nbsp; Maintenance pending to pay: {{flat.balance}}</p>
-				<div class="glyphicon glyphicon-forward forward-icon" ng-click="displayMenu($index)"></div>
+                <div class="glyphicon glyphicon-forward forward-icon" ng-click="displayMenu($index)"></div>
             </div>
-            <div class="box-body" ng-click="displayMenu($index)" ng-show="flat.showMenu">
+            <div class="box-body" ng-show="flat.showMenu">
                 <a class="btn btn-app">
                     <i class="fa fa-inr"></i> Pay Maintenance
                 </a>
-                <a class="btn btn-app" ng-click="gotoFlatDetails($index)">
+                <a class="btn btn-app" ng-click="gotoFlatDetails(flat.flatID)">
                     <i class="fa fa-list-alt"></i> View Flat Details
                 </a>
                 <a class="btn btn-app">
                     <i class="fa fa-user-plus"></i> Rent This Flat
                 </a>
-				<div class="glyphicon glyphicon-backward backward-icon" ng-click="displayMenu($index)"></div>
+                <div class="glyphicon glyphicon-backward backward-icon" ng-click="displayMenu($index)"></div>
             </div>
         </div>
     </div>
+</div>

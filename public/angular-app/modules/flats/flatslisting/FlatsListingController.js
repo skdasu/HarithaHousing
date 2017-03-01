@@ -25,6 +25,13 @@ controller('FlatsListingController', ['$scope', '$stateParams', '$state', '$root
         });
     };
 
+    $scope.getSelectedFlatDetails = function(flatID){
+      console.log("came to flat details from directive "+flatID);
+      $state.go('detail', {
+          flatID: flatID
+      });
+    }
+
     console.log("came to Flats Listing controller  " + $scope.selectedBlock + " " + $scope.selectedBlockNumber);
     $scope.getFlatsInBlock();
 

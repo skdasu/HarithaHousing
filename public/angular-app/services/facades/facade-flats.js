@@ -5,15 +5,11 @@
  **************************************************************/
 angular.module('harithaHousing').
 factory('FlatsFacade', ['$q', '$http', function($q, $http) {
-
     return {
 
-
         getFlatsInBlock: function(request) {
-
             var response = {};
             var deferred = $q.defer();
-
             $http({
                 method: 'GET',
                 url: 'http://localhost:7000/assets/data/flats.json'
@@ -24,19 +20,27 @@ factory('FlatsFacade', ['$q', '$http', function($q, $http) {
             }).error(function() {
                 console.log("error getting data - FlatsFacade - getFlatsInBlock");
             });
+            return deferred.promise;
+        },
 
-
-
+        getFlatDetail: function(request) {
+            var response = {};
+            var deferred = $q.defer();
+            $http({
+                method: 'GET',
+                url: 'http://localhost:7000/assets/data/flatDetail.json'
+            }).success(function(data) {
+                deferred.resolve(data);
+            }).error(function() {
+                console.log("error getting data - FlatsFacade - getFlatDetail");
+            });
             return deferred.promise;
         }
 
     };
-
 }]);
-
 /*
 JSON - Generator - Profile for flats data generation
-
 [
   '{{repeat(100, 200)}}',
   {
@@ -55,6 +59,4 @@ JSON - Generator - Profile for flats data generation
     registered: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}'
   }
 ]
-
-
 */

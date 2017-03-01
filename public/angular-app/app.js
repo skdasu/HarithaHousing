@@ -27,9 +27,7 @@ angular.module('harithaHousing', ["ui.router"])
             .state('detail', {
                 url: '/detail',
                 params: {
-                    'blockSelected': '',
-                    'blockNumber': '',
-                    'flatNumber': '',
+                    'flatID': '',
                 },
                 templateUrl: 'angular-app/modules/flats/detail/detail.html',
                 controller: 'DetailController'
