@@ -1,4 +1,4 @@
-angular.module('harithaHousing', ["ui.router"])
+angular.module('harithaHousing', ["ui.router", "ui.bootstrap"])
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/apartmentblocks")
         $stateProvider
@@ -38,5 +38,10 @@ angular.module('harithaHousing', ["ui.router"])
                 templateUrl: 'angular-app/modules/dashboard/dashboard.html',
                 controller: 'DashboardController'
 
+            })
+            .state('newresident', {
+                url: '/newresident',
+                templateUrl: 'angular-app/modules/residents/newresident/newResident.html',
+                controller: 'NewResidentController'
             });
     }]);
