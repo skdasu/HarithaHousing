@@ -10,7 +10,11 @@
 .glyphicon.glyphicon-forward.forward-icon , .glyphicon.glyphicon-backward.backward-icon{
 	position:absolute;
 	right:1%;
-	top:30%;	
+	top:30%;
     color: #AAA;
     font-size: 2em;
+}
+
+.form-control-feedback{
+  right: 10px !important;
 }
